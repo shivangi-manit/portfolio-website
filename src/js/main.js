@@ -4,6 +4,7 @@ import { initScrollProgress, initCustomCursor, initScrollReveal } from './animat
 import { initProjects } from './projects.js';
 import { initContactForm } from './form.js';
 import { initSoundEffects } from './sound.js';
+import { initSkillModal } from './skillModal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Theme Switcher
@@ -19,13 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Render Projects Showcase
   initProjects();
 
-  // 5. Initialize Contact Form (Mail Delivery) & Email Copy
+  // 5. Initialize Skill Interactive Popups
+  initSkillModal();
+
+  // 6. Initialize Contact Form & Email Copy
   initContactForm();
 
-  // 6. Initialize IntersectionObserver Scroll Reveals
+  // 7. Initialize IntersectionObserver Scroll Reveals
   initScrollReveal();
 
-  // 7. Sticky Navbar, Back to Top & Active Section Observer
+  // 8. Sticky Navbar, Back to Top & Active Section Observer
   const navbar = document.getElementById('navbar');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
