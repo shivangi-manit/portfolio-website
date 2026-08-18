@@ -1,125 +1,129 @@
-/* Skills & About Tags Interactive Modal Popup Controller */
+/* Resume-Grounded Skills Modal Popup Engine */
 
 const skillDetailsMap = {
-  "React.js": {
-    category: "Frontend Framework",
-    desc: "Used in Campus Placement Portal & MirrorTalk for component architecture, custom hooks, state management, and real-time Axios API updates.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "Node.js": {
-    category: "Backend Environment",
-    desc: "Powering the REST API services, asynchronous event handlers, and server architecture for full-stack web applications.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "Express.js": {
-    category: "Backend Web Framework",
-    desc: "Used to construct 20+ RESTful APIs, JWT authentication middleware, CORS configuration, and request validation routes.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "MySQL": {
-    category: "Relational Database",
-    desc: "Normalized database design with 10+ tables, primary/foreign key relationships, indexing, and multi-table joins for efficient data retrieval.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
+  // Languages
   "C++": {
-    category: "Core Language",
-    desc: "Primary language for Data Structures & Algorithms. Earned 5-Star C++ Badge on HackerRank and solved 250+ DSA problems.",
-    projects: ["250+ DSA Problems (LeetCode / HackerRank)"]
-  },
-  "Tailwind CSS": {
-    category: "Frontend Styling",
-    desc: "Utility-first CSS framework utilized for building responsive, accessible UI layouts for the Campus Placement Portal.",
-    projects: ["Campus Placement Portal"]
-  },
-  "HTML5": {
-    category: "Web Standard",
-    desc: "Semantic layout structuring, accessible ARIA attributes, and clean DOM hierarchy across all frontend projects.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "CSS3": {
-    category: "Web Styling",
-    desc: "Custom CSS properties (variables), responsive flexbox/grid layouts, animations, and dark/light theme systems.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "REST APIs": {
-    category: "Backend Architecture",
-    desc: "Designed and implemented 20+ RESTful API endpoints for authentication, job applications, mood tracking, and recruiter workflows.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "JWT Authentication": {
-    category: "Security & Auth",
-    desc: "JSON Web Token implementation for role-based authorization (Student, Recruiter, Admin) and stateless session management.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "JWT": {
-    category: "Security & Auth",
-    desc: "JSON Web Token implementation for role-based authorization (Student, Recruiter, Admin) and stateless session management.",
-    projects: ["Campus Placement Portal", "MirrorTalk"]
-  },
-  "OAuth": {
-    category: "OAuth 2.0 Security",
-    desc: "Integrated Google OAuth 2.0 authentication for seamless user sign-in and account verification.",
-    projects: ["MirrorTalk"]
-  },
-  "Google OAuth": {
-    category: "OAuth 2.0 Security",
-    desc: "Integrated Google OAuth 2.0 authentication for seamless user sign-in and account verification.",
-    projects: ["MirrorTalk"]
-  },
-  "Multer": {
-    category: "Node.js Middleware",
-    desc: "Middleware handling multipart/form-data for file uploads, profile avatars, and document attachments.",
-    projects: ["MirrorTalk"]
-  },
-  "SailPoint IdentityIQ": {
-    category: "Identity & Governance",
-    desc: "Configured identity lifecycle management, role-based access control (RBAC), and Joiner-Mover-Leaver capstone workflows during Accenture internship.",
-    projects: ["Accenture Software Engineering Internship"]
-  },
-  "Git": {
-    category: "Version Control",
-    desc: "Distributed version control for code tracking, branching strategy, and pull request workflows.",
-    projects: ["All Open Source Repositories"]
-  },
-  "GitHub": {
-    category: "Code Hosting",
-    desc: "Repository management, CI/CD actions, and project showcase hosting.",
-    projects: ["github.com/shivangi-guptaa"]
-  },
-  "Postman": {
-    category: "API Testing Tool",
-    desc: "API endpoint testing, mock servers, and automated collection testing. Earned Postman Student Expert Certification.",
-    projects: ["Certified Postman Student Expert"]
-  },
-  "VS Code": {
-    category: "Primary IDE",
-    desc: "Customized development environment for JavaScript, React, C++, and Node.js.",
-    projects: ["Development Workspace"]
-  },
-  "Vercel": {
-    category: "Cloud Deployment",
-    desc: "Production hosting platform for live full-stack project deployments with automated GitHub integration.",
-    projects: ["mirrortalk-app.vercel.app", "campus-placement-portal-website.vercel.app"]
+    category: "Languages",
+    desc: "Primary programming language for Data Structures & Algorithms. Earned 5-Star C++ Badge on HackerRank and solved 250+ DSA problems.",
+    projects: ["250+ DSA Problems (LeetCode & HackerRank)"]
   },
   "JavaScript (ES6)": {
-    category: "Core Language",
-    desc: "Modern ES6+ syntax including async/await, ES modules, promises, destructuring, and functional array methods.",
+    category: "Languages",
+    desc: "Core scripting language used for frontend React.js components, asynchronous API calls, and backend Node.js / Express.js services.",
     projects: ["Campus Placement Portal", "MirrorTalk"]
   },
   "SQL": {
-    category: "Database Query Language",
-    desc: "Complex database queries, index creation, multi-table JOIN operations, and schema normalization.",
+    category: "Languages",
+    desc: "Structured Query Language utilized for relational database queries, table joins, schema creation, and database constraints.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+
+  // Frontend
+  "React.js": {
+    category: "Frontend",
+    desc: "Frontend library used in Campus Placement Portal & MirrorTalk for interactive component architecture, state management, and real-time Axios API updates.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "HTML5": {
+    category: "Frontend",
+    desc: "Standard markup language for semantic page structuring and accessible DOM layouts.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "CSS3": {
+    category: "Frontend",
+    desc: "Cascading style sheets for responsive layouts, custom CSS design system properties, animations, and theme styling.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "Tailwind CSS": {
+    category: "Frontend",
+    desc: "Utility-first CSS framework utilized for building responsive, accessible UI layouts for the Campus Placement Portal.",
+    projects: ["Campus Placement Portal"]
+  },
+
+  // Backend
+  "Node.js": {
+    category: "Backend",
+    desc: "JavaScript runtime powering asynchronous server architectures, REST API endpoints, and backend application logic.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "Express.js": {
+    category: "Backend",
+    desc: "Backend framework used to build 20 REST API endpoints, JWT authentication middleware, routing, and request validation.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "REST APIs": {
+    category: "Backend",
+    desc: "Designed and implemented 20 RESTful API endpoints for authentication, job postings, candidate applications, and user profiles.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "JWT": {
+    category: "Backend",
+    desc: "JSON Web Token implementation for role-based authorization (Student, Recruiter, Admin) and stateless session security.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "OAuth": {
+    category: "Backend",
+    desc: "Integrated Google OAuth 2.0 social authentication for user sign-in and account verification.",
+    projects: ["MirrorTalk"]
+  },
+  "Multer": {
+    category: "Backend",
+    desc: "Node.js middleware handling multipart/form-data for file upload processing and document attachments.",
+    projects: ["MirrorTalk"]
+  },
+
+  // Database
+  "MySQL": {
+    category: "Database",
+    desc: "Relational database system configured with 10+ normalized tables, foreign key constraints, and indexing.",
     projects: ["Campus Placement Portal", "MirrorTalk"]
   },
   "Schema Design": {
-    category: "Database Engineering",
-    desc: "Normalized 3NF relational database schema design with primary/foreign key constraints.",
+    category: "Database",
+    desc: "Relational database schema normalization (3NF) using foreign keys and structured table relationships.",
     projects: ["Campus Placement Portal", "MirrorTalk"]
   },
-  "Indexing": {
-    category: "Database Optimization",
-    desc: "B-Tree database indexing on high-frequency query columns to optimize data retrieval performance.",
+  "Joins": {
+    category: "Database",
+    desc: "Multi-table SQL JOIN operations for retrieving relational data across users, job postings, and application records.",
     projects: ["Campus Placement Portal"]
+  },
+  "Indexing": {
+    category: "Database",
+    desc: "Database indexing on high-frequency query columns to optimize data retrieval execution speeds.",
+    projects: ["Campus Placement Portal"]
+  },
+
+  // Tools
+  "Git": {
+    category: "Tools",
+    desc: "Distributed version control system for tracking code changes and managing development history.",
+    projects: ["All Repositories"]
+  },
+  "GitHub": {
+    category: "Tools",
+    desc: "Code repository hosting, project showcase management, and open-source version control.",
+    projects: ["github.com/shivangi-guptaa"]
+  },
+  "Postman": {
+    category: "Tools",
+    desc: "API endpoint testing and documentation tool. Earned Postman Student Expert certification.",
+    projects: ["Certified Postman Student Expert"]
+  },
+  "VS Code": {
+    category: "Tools",
+    desc: "Primary integrated development environment for C++, JavaScript, React.js, and Node.js.",
+    projects: ["Development Workspace"]
+  },
+  "Vercel": {
+    category: "Tools",
+    desc: "Cloud deployment platform hosting live full-stack web application demonstrations.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "SailPoint IdentityIQ": {
+    category: "Tools",
+    desc: "Identity lifecycle management, role-based access control (RBAC), and Joiner-Mover-Leaver capstone workflows configured during Accenture internship.",
+    projects: ["Accenture Software Engineering Internship"]
   }
 };
 
@@ -130,14 +134,14 @@ export function initSkillModal() {
 
   if (!modalBackdrop || !modalCloseBtn || !modalBody) return;
 
-  // Global click delegate for editorial skill tags
+  // Global click delegate for skill tags
   document.addEventListener('click', (e) => {
     const tagEl = e.target.closest('.editorial-tag');
     if (tagEl) {
       const skillName = tagEl.textContent.trim();
       const details = skillDetailsMap[skillName] || {
         category: "Technical Skill",
-        desc: `${skillName} is a core component of Shivangi's software engineering toolkit used across full-stack applications and DSA problem solving.`,
+        desc: `${skillName} is listed under Shivangi's technical skill set from her official resume.`,
         projects: ["Campus Placement Portal", "MirrorTalk"]
       };
 
@@ -178,7 +182,7 @@ function openSkillModal(skillName, details, backdrop, modalBody) {
     </p>
 
     <div style="background: var(--bg-primary); padding: 1.1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-      <span style="font-family: var(--font-code); font-size: 0.75rem; color: var(--accent-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Relevant Experience & Projects</span>
+      <span style="font-family: var(--font-code); font-size: 0.75rem; color: var(--accent-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Relevant Resume Context</span>
       <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
         ${details.projects.map(p => `<span class="badge badge-accent">${p}</span>`).join('')}
       </div>

@@ -1,4 +1,4 @@
-/* Featured Projects & Case Study Modal Engine for Shivangi Gupta */
+/* Resume-Grounded Projects Engine for Shivangi Gupta */
 
 export const projectsData = [
   {
@@ -7,40 +7,39 @@ export const projectsData = [
     title: "Campus Placement Portal",
     url: "https://campus-placement-portal-website.vercel.app/",
     githubUrl: "https://github.com/shivangi-guptaa/Campus-Placement-Portal",
-    desc: "Production-ready placement management portal engineered for Student, Recruiter, and Admin roles.",
+    desc: "Full-stack placement portal supporting Student, Recruiter, and Admin roles with JWT authentication.",
     techStack: ["React.js", "Node.js", "Express.js", "MySQL", "JWT", "Axios", "Tailwind CSS"],
     scaleMetrics: [
       { label: "REST APIs", value: "20 Endpoints" },
       { label: "Database Schema", value: "10+ Relational Tables" },
-      { label: "Role System", value: "RBAC (Student/Recruiter/Admin)" },
-      { label: "Real-time Search", value: "Multi-parameter Filtering" }
+      { label: "Role System", value: "3 Roles (Student/Recruiter/Admin)" },
+      { label: "Security & Access", value: "JWT + RBAC Middleware" }
     ],
     highlights: [
       "Developed a full-stack placement portal supporting Student, Recruiter, and Admin roles with JWT-based authentication and role-based authorization.",
-      "Built 20 RESTful APIs for authentication, job postings, applications, recruiter workflows, and administrative operations.",
-      "Designed a normalized MySQL database with 10+ tables using foreign key constraints and indexing for efficient data retrieval.",
-      "Implemented search and filtering by CGPA, branch, and skills with real-time updates using React.js and Axios."
+      "Developed 20 REST API endpoints for authentication, job postings, applications, recruiter workflows, and administrative operations.",
+      "Designed a normalized MySQL database with 10+ related tables using foreign key constraints and indexes.",
+      "Implemented dynamic search and filtering by CGPA, branch, and skills using React.js and Axios."
     ],
     mockupAddress: "campus-placement-portal-website.vercel.app",
     mockupImage: "./assets/campus_placement_portal.png",
     caseStudy: {
-      problem: "Traditional university placement management relies on fragmented Google Sheets and manual emails, resulting in inefficient candidate eligibility verification, communication delays, and lack of real-time application tracking for students and recruiters.",
-      solution: "Engineered a centralized, role-based platform that automates placement drive scheduling, candidate eligibility filtering, application tracking, and recruiter management with strict database constraints and JWT security.",
+      problem: "University placement management requires a unified portal to handle candidate eligibility evaluation, job postings, and multi-role application workflows efficiently.",
+      solution: "Engineered a full-stack portal connecting students, recruiters, and admins through 20 REST APIs, JWT authentication, and a normalized MySQL database.",
       architectureFlow: [
-        { layer: "Frontend Layer", tech: "React.js + Tailwind CSS", detail: "State management, dynamic filtering, responsive UI" },
-        { layer: "API Integration", tech: "Axios Interceptors", detail: "Bearer token injection, centralized error handling" },
-        { layer: "Backend Server", tech: "Node.js + Express.js", detail: "20 REST API endpoints, input validation, CORS" },
-        { layer: "Security Middleware", tech: "JWT + Custom RBAC", detail: "Token verification, Student / Recruiter / Admin access control" },
-        { layer: "Database Layer", tech: "MySQL Relational DB", detail: "10+ normalized tables, foreign key constraints, indexed queries" }
+        { layer: "Frontend Layer", tech: "React.js + Tailwind CSS", detail: "Dynamic filtering, state management, Axios API calls" },
+        { layer: "Backend Server", tech: "Node.js + Express.js", detail: "20 REST API endpoints, routing, error handling" },
+        { layer: "Security Middleware", tech: "JWT + RBAC", detail: "Role-based authorization (Student / Recruiter / Admin)" },
+        { layer: "Database Layer", tech: "MySQL Relational DB", detail: "10+ related tables, foreign key constraints, indexes" }
       ],
       apiDesign: [
-        "POST /api/auth/login - Issues signed JWT with payload role",
-        "GET /api/jobs/search - Queries jobs filtered by CGPA threshold & branch",
-        "POST /api/applications/apply - Transactional student application submission",
-        "GET /api/admin/metrics - Administrative placement drive analytics"
+        "POST /api/auth/login - Authenticates user and issues signed JWT with role payload",
+        "GET /api/jobs/search - Fetches job postings filtered dynamically by CGPA & branch",
+        "POST /api/applications/apply - Submits candidate job applications with validation",
+        "GET /api/admin/drives - Manages recruitment drives and applicant rosters"
       ],
-      challenges: "Ensuring ACID compliance and preventing duplicate application submissions when hundreds of students apply simultaneously during high-volume placement drives.",
-      learnings: "Deepened practical mastery of relational database normalization, multi-table SQL joins, JWT secret management, and robust error handling across asynchronous REST APIs."
+      challenges: "Handled relational consistency and duplicate application concerns through database constraints and application-level validation.",
+      learnings: "Gained practical expertise in relational database normalization, multi-table SQL joins, foreign key constraints, JWT role authorization, and asynchronous REST API integration."
     }
   },
   {
@@ -49,16 +48,16 @@ export const projectsData = [
     title: "MirrorTalk – Mental Wellness Platform",
     url: "https://mirrortalk-app.vercel.app/",
     githubUrl: "https://github.com/shivangi-guptaa/MirrorTalk",
-    desc: "Full-stack application engineered for secure user authentication, mood analytics, and journaling.",
+    desc: "Full-Stack Journaling & Mood Analytics Platform with dual authentication and data visualization.",
     techStack: ["React.js", "Node.js", "Express.js", "MySQL", "JWT", "Google OAuth", "Recharts"],
     scaleMetrics: [
-      { label: "Authentication", value: "JWT + OAuth 2.0" },
-      { label: "Data Visualization", value: "Recharts Analytics" },
-      { label: "Media Handling", value: "Multer Upload Middleware" },
-      { label: "Security", value: "bcrypt Password Hashing" }
+      { label: "Authentication", value: "JWT + Google OAuth" },
+      { label: "Data Visualization", value: "Recharts Dashboards" },
+      { label: "File Storage", value: "Multer Middleware" },
+      { label: "Password Security", value: "bcrypt Hashing" }
     ],
     highlights: [
-      "Implemented secure authentication using JWT, Google OAuth, bcrypt password hashing, email verification, and password reset functionality.",
+      "Implemented authentication using JWT, Google OAuth, bcrypt password hashing, email verification, and password reset functionality.",
       "Developed REST APIs for journaling, mood tracking, profile management, and file uploads with validation using Express.js and MySQL.",
       "Built interactive dashboards with Recharts to visualize mood trends, journaling history, and user engagement."
     ],
@@ -90,21 +89,21 @@ export const projectsData = [
       </div>
     `,
     caseStudy: {
-      problem: "Users require a private, end-to-end secure environment to log daily journal entries and visualize personal mood analytics over time without privacy concerns.",
-      solution: "Built a full-stack platform with Google OAuth 2.0 and JWT dual-authentication, Multer file upload storage, and Recharts interactive graphs for data visualization.",
+      problem: "Users require a secure full-stack platform to record journal entries and visualize personal mood analytics securely over time.",
+      solution: "Developed a platform with Google OAuth and JWT authentication, bcrypt password security, Multer media handling, and Recharts interactive graphs.",
       architectureFlow: [
-        { layer: "Frontend Layer", tech: "React.js + Recharts", detail: "Real-time analytics graphs, responsive form states" },
-        { layer: "Authentication", tech: "Google OAuth + JWT", detail: "OAuth 2.0 token exchange, bcrypt hashed passwords" },
-        { layer: "Backend Server", tech: "Express.js REST Service", detail: "Protected API routes, file upload validation" },
-        { layer: "Database Layer", tech: "MySQL Schema", detail: "User profiles, encrypted journal logs, analytics tables" }
+        { layer: "Frontend Layer", tech: "React.js + Recharts", detail: "Interactive analytics dashboards, journaling UI" },
+        { layer: "Authentication", tech: "JWT + Google OAuth", detail: "Social OAuth 2.0, bcrypt hashed passwords, email verification" },
+        { layer: "Backend Server", tech: "Express.js REST APIs", detail: "Protected routes, profile management, Multer file uploads" },
+        { layer: "Database Layer", tech: "MySQL Schema", detail: "User credentials, journal records, mood logs" }
       ],
       apiDesign: [
-        "POST /api/auth/google - Authenticates user via Google OAuth 2.0",
-        "POST /api/journal/entry - Securely saves journal log with attachment",
-        "GET /api/analytics/mood - Aggregates mood entries over weekly time-windows"
+        "POST /api/auth/google - Authenticates user session via Google OAuth 2.0",
+        "POST /api/journal/create - Saves journal entry with file attachment validation",
+        "GET /api/analytics/mood - Fetches aggregated mood tracking history"
       ],
-      challenges: "Synchronizing dual authentication paths (custom JWT password login vs. Google OAuth) into a unified session management state.",
-      learnings: "Gained hands-on proficiency in social OAuth integrations, file upload handling via Multer, and data visualization state rendering with Recharts."
+      challenges: "Integrating dual authentication mechanisms (custom JWT login and Google OAuth) with unified session security.",
+      learnings: "Mastered OAuth 2.0 integration, file upload handling with Multer, data security with bcrypt, and dynamic analytics graph rendering with Recharts."
     }
   }
 ];
@@ -128,7 +127,7 @@ export function initProjects() {
         <div class="project-scale-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; margin-bottom: 1.2rem;">
           ${project.scaleMetrics.map(m => `
             <div style="background: var(--bg-primary); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-              <div style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-code); uppercase;">${m.label}</div>
+              <div style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-code); text-transform: uppercase;">${m.label}</div>
               <div style="font-size: 0.92rem; font-weight: 700; color: var(--accent-primary);">${m.value}</div>
             </div>
           `).join('')}
