@@ -339,7 +339,10 @@
         <div class="education-card reveal-on-scroll stagger-2">
           <span class="section-label" style="margin-bottom: 0.4rem;">2020 – 2023</span>
           <h3 style="font-size: 1.25rem; margin-bottom: 0.3rem;">Bachelor of Science (PCM)</h3>
-          <p style="color: var(--text-secondary); font-size: 0.95rem;">Hemvati Nandan Bahuguna Garhwal University</p>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.5rem;">Hemvati Nandan Bahuguna Garhwal University</p>
+          <div style="font-family: var(--font-code); font-size: 0.9rem; color: var(--accent-primary); font-weight: 700;">
+            CGPA: 6.50
+          </div>
         </div>
       </div>
     </div>
@@ -414,7 +417,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact Section (Clean Direct Contact Layout) -->
   <section id="contact" class="section">
     <div class="container">
       <div class="section-header">
@@ -425,50 +428,30 @@
         </p>
       </div>
 
-      <div class="contact-grid">
-        <div class="contact-card-box reveal-on-scroll stagger-1">
-          <h3 style="font-size: 1.25rem; margin-bottom: 0.8rem;">Direct Contact</h3>
-          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-            Feel free to drop an email or connect on social platforms.
-          </p>
+      <div class="editorial-card reveal-on-scroll" style="padding: 3rem 2.5rem; text-align: center; max-width: 800px; margin: 0 auto;">
+        <span style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 0.6rem;">DIRECT CONTACT</span>
+        <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--text-primary);">reachshivangigupta@gmail.com</h3>
+        <p style="color: var(--text-secondary); font-size: 1.05rem; max-width: 540px; margin: 0 auto 2rem auto; line-height: 1.6;">
+          Feel free to reach out directly via email or connect with me on GitHub, LinkedIn, or LeetCode.
+        </p>
 
-          <div style="margin-bottom: 1.5rem;">
-            <span style="font-family: var(--font-code); font-size: 0.75rem; color: var(--text-muted); display: block;">EMAIL ADDRESS</span>
-            <a href="mailto:reachshivangigupta@gmail.com" style="font-weight: 700; color: var(--text-primary); text-decoration: underline; font-size: 1.05rem;">
-              reachshivangigupta@gmail.com
-            </a>
-          </div>
-
-          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-            <button id="copy-email-btn" class="btn btn-secondary btn-sm">Copy Email</button>
-            <a href="https://github.com/shivangi-guptaa" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/shivangi-gupta-nitbhopal/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">LinkedIn ↗</a>
-            <a href="https://leetcode.com/u/shivangi_guptaa/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">LeetCode ↗</a>
-          </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="mailto:reachshivangigupta@gmail.com" class="btn btn-primary">
+            Send Email
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </a>
+          <button id="copy-email-btn" class="btn btn-secondary">
+            Copy Email Address
+          </button>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            Download Resume (PDF)
+          </a>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-card-box reveal-on-scroll stagger-2">
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="form-name" class="form-label">Name</label>
-              <input type="text" id="form-name" class="form-input" placeholder="Your Name" required />
-            </div>
-
-            <div class="form-group">
-              <label for="form-email" class="form-label">Email</label>
-              <input type="email" id="form-email" class="form-input" placeholder="your.email@example.com" required />
-            </div>
-
-            <div class="form-group">
-              <label for="form-message" class="form-label">Message</label>
-              <textarea id="form-message" class="form-textarea" placeholder="Your message..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              Send Message
-            </button>
-          </form>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2.2rem; padding-top: 1.8rem; border-top: 1px solid var(--border-subtle);">
+          <a href="https://github.com/shivangi-guptaa" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);" class="nav-link">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/shivangi-gupta-nitbhopal/" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);" class="nav-link">LinkedIn ↗</a>
+          <a href="https://leetcode.com/u/shivangi_guptaa/" target="_blank" rel="noopener noreferrer" style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);" class="nav-link">LeetCode ↗</a>
         </div>
       </div>
     </div>
