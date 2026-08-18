@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shivangi Gupta | Aspiring Software Developer</title>
+  <title>Shivangi Gupta | Software Developer | MCA @ MANIT Bhopal</title>
   <meta name="description" content="MCA student at MANIT Bhopal with experience in full-stack development using React.js, Node.js, Express.js and MySQL." />
   
   <!-- OpenGraph Metadata -->
-  <meta property="og:title" content="Shivangi Gupta | Aspiring Software Developer" />
+  <meta property="og:title" content="Shivangi Gupta | Software Developer | MCA @ MANIT Bhopal" />
   <meta property="og:description" content="MCA student at MANIT Bhopal with experience in full-stack development using React.js, Node.js, Express.js and MySQL." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://shivangiguptaa.me" />
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+  <!-- Custom SG SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
   <!-- Core Stylesheet Imports -->
   <link rel="stylesheet" href="./src/css/variables.css" />
@@ -41,9 +42,11 @@
 
       <ul id="nav-menu" class="nav-menu">
         <li><a href="#about" class="nav-link">ABOUT</a></li>
-        <li><a href="#skills" class="nav-link">SKILLS</a></li>
         <li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
         <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+        <li><a href="#skills" class="nav-link">SKILLS</a></li>
+        <li><a href="#github" class="nav-link">GITHUB</a></li>
+        <li><a href="#education" class="nav-link">EDUCATION</a></li>
         <li><a href="#achievements" class="nav-link">ACHIEVEMENTS</a></li>
         <li><a href="#contact" class="nav-link">CONTACT</a></li>
       </ul>
@@ -61,7 +64,7 @@
           <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
 
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">RESUME</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">RESUME ↓</a>
 
         <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Open Navigation Menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -70,9 +73,15 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Section 1: Hero Section -->
   <section id="hero" class="hero-section">
     <div class="container">
+      <!-- Availability Pill -->
+      <div class="availability-pill reveal-on-scroll">
+        <span class="availability-dot"></span>
+        <span>Open to Software Engineering Internships and SDE opportunities.</span>
+      </div>
+
       <div class="hero-grid">
         <div class="hero-content reveal-on-scroll">
           <span class="hero-role-label">Aspiring Software Developer</span>
@@ -82,17 +91,16 @@
           </h1>
 
           <p class="hero-subtitle">
-            MCA student at MANIT Bhopal, focused on developing full-stack web applications using React.js, Node.js, Express.js, and MySQL.
+            MCA student at MANIT Bhopal, focused on developing full-stack web applications using React.js, Node.js, Express.js, and MySQL. Completed a Software Engineering internship at Accenture.
           </p>
 
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">
-              View Projects
+              View Featured Projects
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
             </a>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              Download Resume
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Resume ↓
             </a>
           </div>
 
@@ -109,7 +117,7 @@
           </div>
         </div>
 
-        <!-- Right Side Structured Hero Information Panel -->
+        <!-- Right Side Structured Hero Info & "Currently" Panel -->
         <div class="hero-info-panel reveal-on-scroll stagger-2">
           <span class="panel-header-title">Developer Overview</span>
           <div class="panel-rows-list">
@@ -121,7 +129,7 @@
 
             <div class="panel-row">
               <span class="panel-row-label">FOCUS</span>
-              <div class="panel-row-value">Full Stack Development</div>
+              <div class="panel-row-value">Full Stack Engineering</div>
               <div class="panel-row-sub">DSA • Backend Systems • REST APIs</div>
             </div>
 
@@ -131,12 +139,30 @@
               <div class="panel-row-sub">May 2026 – Jul 2026 (SailPoint IdentityIQ)</div>
             </div>
           </div>
+
+          <!-- Currently Live Status Block -->
+          <div class="currently-card">
+            <div class="currently-grid">
+              <div class="currently-item">
+                <span class="currently-label">BUILDING:</span>
+                <span class="currently-val">Campus Placement Portal</span>
+              </div>
+              <div class="currently-item">
+                <span class="currently-label">LEARNING:</span>
+                <span class="currently-val">System Design & Advanced Backend</span>
+              </div>
+              <div class="currently-item">
+                <span class="currently-label">PRACTICING:</span>
+                <span class="currently-val">DSA on LeetCode & HackerRank</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- Section 2: About & "Engineering Focus" (Why Hire Me) -->
   <section id="about" class="section">
     <div class="container">
       <div class="section-header">
@@ -147,14 +173,14 @@
       <div class="about-grid">
         <div class="reveal-on-scroll">
           <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
-            MCA student at MANIT Bhopal, focused on developing full-stack web applications using React.js, Node.js, Express.js, and MySQL. Completed a Software Engineering internship at Accenture and solved 250+ DSA problems across LeetCode.
+            MCA student at MANIT Bhopal (CGPA: 8.66), focused on developing full-stack web applications using React.js, Node.js, Express.js, and MySQL. Completed a Software Engineering internship at Accenture and solved 250+ DSA problems across LeetCode.
           </p>
           <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <span class="editorial-tag" style="cursor: pointer;" title="Click for skill details">React.js</span>
-            <span class="editorial-tag" style="cursor: pointer;" title="Click for skill details">Node.js</span>
-            <span class="editorial-tag" style="cursor: pointer;" title="Click for skill details">Express.js</span>
-            <span class="editorial-tag" style="cursor: pointer;" title="Click for skill details">MySQL</span>
-            <span class="editorial-tag" style="cursor: pointer;" title="Click for skill details">C++</span>
+            <span class="editorial-tag" style="cursor: pointer;">React.js</span>
+            <span class="editorial-tag" style="cursor: pointer;">Node.js</span>
+            <span class="editorial-tag" style="cursor: pointer;">Express.js</span>
+            <span class="editorial-tag" style="cursor: pointer;">MySQL</span>
+            <span class="editorial-tag" style="cursor: pointer;">C++</span>
           </div>
         </div>
 
@@ -177,38 +203,97 @@
           </div>
         </div>
       </div>
+
+      <!-- Engineering Focus Block ("Why Hire Me") -->
+      <div style="margin-top: 3.5rem;">
+        <span class="section-label">Core Capabilities</span>
+        <h3 style="font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem;">Engineering Focus</h3>
+
+        <div class="engineering-focus-grid">
+          <div class="focus-card reveal-on-scroll stagger-1">
+            <div class="focus-icon-header">01 &bull; BACKEND & APIS</div>
+            <h4 class="focus-card-title">Backend Engineering</h4>
+            <p class="focus-card-desc">
+              Building robust RESTful APIs with Node.js and Express.js, implementing JWT/OAuth authentication, role-based access control (RBAC), and designing normalized relational MySQL schemas.
+            </p>
+          </div>
+
+          <div class="focus-card reveal-on-scroll stagger-2">
+            <div class="focus-icon-header">02 &bull; DATA STRUCTURES</div>
+            <h4 class="focus-card-title">Problem Solving</h4>
+            <p class="focus-card-desc">
+              Solved 250+ Data Structures & Algorithms problems across LeetCode and HackerRank using C++, holding a 5-Star HackerRank badge and strong algorithmic fundamentals.
+            </p>
+          </div>
+
+          <div class="focus-card reveal-on-scroll stagger-3">
+            <div class="focus-icon-header">03 &bull; FULL STACK APPS</div>
+            <h4 class="focus-card-title">Product Development</h4>
+            <p class="focus-card-desc">
+              Architecting full-stack web applications from database schema design to responsive React.js frontends with clean state management and production deployments on Vercel.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section (Visual Priority #1) -->
+  <!-- Section 3: Experience (MOVED HIGHER UP!) -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Industry Impact</span>
+        <h2 class="section-title">Experience</h2>
+        <p class="section-description">
+          Software engineering internship experience at global technology leaders.
+        </p>
+      </div>
+
+      <div class="timeline-card reveal-on-scroll">
+        <div class="timeline-box">
+          <span style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); font-weight: 700;">ACCENTURE SOLUTIONS PVT. LTD.</span>
+          <h3 style="font-size: 1.35rem; margin-top: 0.2rem; margin-bottom: 0.2rem; color: var(--text-primary);">Custom Software Engineering Associate Intern</h3>
+          <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 1rem;">May 2026 – Jul 2026</span>
+
+          <ul class="project-highlights-list" style="margin-bottom: 0;">
+            <li>Worked with SailPoint IdentityIQ concepts including identity lifecycle management, role-based access control (RBAC), and access governance.</li>
+            <li>Designed a capstone Identity and Access Management solution covering Joiner-Mover-Leaver workflows, access requests, role certification, and approval processes.</li>
+            <li>Prepared technical documentation and presented the proposed solution to mentors, incorporating feedback to refine the solution.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Featured Projects (Main Feature: Campus Placement Portal) -->
   <section id="projects" class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Engineering Showcase</span>
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Featured Projects</h2>
         <p class="section-description">
-          Full-stack web applications built with React.js, Node.js, Express.js, and MySQL.
+          Production-ready full-stack applications with architecture diagrams and case studies.
         </p>
       </div>
 
       <div id="projects-container" class="projects-container">
-        <!-- Rendered via src/js/projects.js -->
+        <!-- Rendered dynamically via src/js/projects.js -->
       </div>
     </div>
   </section>
 
-  <!-- Skills & DSA Section -->
+  <!-- Section 5: Skills & "Engineering Highlights" -->
   <section id="skills" class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Technical Stack</span>
-        <h2 class="section-title">Skills & Capabilities</h2>
+        <h2 class="section-title">What I Work With</h2>
         <p class="section-description" style="font-size: 0.95rem; margin-top: 0.3rem;">
           Click any skill tag below to open technical breakdown & usage popup.
         </p>
       </div>
 
-      <div class="skills-grid" style="margin-bottom: 3rem;">
+      <div class="skills-grid">
         <!-- Languages -->
         <div class="skill-category-box reveal-on-scroll stagger-1">
           <h3 class="category-title">Languages</h3>
@@ -249,7 +334,6 @@
           <div class="skill-tags-wrapper">
             <span class="editorial-tag" style="cursor: pointer;">MySQL</span>
             <span class="editorial-tag" style="cursor: pointer;">Schema Design</span>
-            <span class="editorial-tag" style="cursor: pointer;">Joins</span>
             <span class="editorial-tag" style="cursor: pointer;">Indexing</span>
           </div>
         </div>
@@ -268,8 +352,23 @@
         </div>
       </div>
 
+      <!-- Engineering Highlights Block -->
+      <div class="engineering-highlights-card reveal-on-scroll">
+        <span style="font-family: var(--font-code); font-size: 0.75rem; color: var(--accent-primary); font-weight: 700;">ENGINEERING HIGHLIGHTS</span>
+        <h3 style="font-size: 1.25rem; margin-top: 0.2rem; margin-bottom: 0.4rem; color: var(--text-primary);">Concrete Technical Execution</h3>
+        
+        <div class="highlights-pills-grid">
+          <div class="highlight-pill-item">Designed normalized relational schemas (10+ MySQL tables)</div>
+          <div class="highlight-pill-item">Built 20+ RESTful API endpoints with Express.js</div>
+          <div class="highlight-pill-item">Implemented JWT authentication & custom RBAC middleware</div>
+          <div class="highlight-pill-item">Integrated Google OAuth 2.0 social authentication</div>
+          <div class="highlight-pill-item">Optimized SQL queries using foreign key indexing</div>
+          <div class="highlight-pill-item">Tested & documented REST collections using Postman</div>
+        </div>
+      </div>
+
       <!-- DSA / Problem Solving Box -->
-      <div class="dsa-box reveal-on-scroll">
+      <div class="dsa-box reveal-on-scroll" style="margin-top: 2rem;">
         <div>
           <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;">Data Structures & Problem Solving</h3>
           <p style="color: var(--text-secondary); font-size: 0.95rem;">
@@ -289,34 +388,62 @@
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section">
+  <!-- Section 6: GitHub Activity & Proof -->
+  <section id="github" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Professional Roadmap</span>
-        <h2 class="section-title">Experience</h2>
+        <span class="section-label">Code Base Proof</span>
+        <h2 class="section-title">GitHub Activity</h2>
+        <p class="section-description">
+          Open-source repositories, full-stack codebases, and continuous development activity.
+        </p>
       </div>
 
-      <div class="timeline-card reveal-on-scroll">
-        <div class="timeline-line"></div>
-        <div class="timeline-node"></div>
+      <div class="editorial-card reveal-on-scroll" style="padding: 2rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <span style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); font-weight: 700;">GITHUB REPOSITORIES</span>
+            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-top: 0.2rem;">github.com/shivangi-guptaa</h3>
+          </div>
+          <a href="https://github.com/shivangi-guptaa" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            View GitHub Profile ↗
+          </a>
+        </div>
 
-        <div class="timeline-box">
-          <span style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-primary); font-weight: 700;">ACCENTURE SOLUTIONS PVT. LTD.</span>
-          <h3 style="font-size: 1.3rem; margin-top: 0.2rem; margin-bottom: 0.2rem;">Custom Software Engineering Associate Intern</h3>
-          <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 1rem;">May 2026 – Jul 2026</span>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+          <div style="background: var(--bg-primary); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-weight: 700; font-size: 1rem; color: var(--text-primary);">Campus-Placement-Portal</span>
+              <span class="badge badge-accent" style="font-size: 0.7rem;">Public Repo</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">
+              Full-stack placement management portal supporting Student, Recruiter, and Admin roles.
+            </p>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-code);">
+              <span>JavaScript &bull; React &bull; Node</span>
+              <a href="https://github.com/shivangi-guptaa/Campus-Placement-Portal" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">Repository ↗</a>
+            </div>
+          </div>
 
-          <ul class="project-highlights-list" style="margin-bottom: 0;">
-            <li>Worked with SailPoint IdentityIQ concepts including identity lifecycle management, role-based access control (RBAC), and access governance.</li>
-            <li>Designed a capstone Identity and Access Management solution covering Joiner-Mover-Leaver workflows, access requests, role certification, and approval processes.</li>
-            <li>Prepared technical documentation and presented the proposed solution to mentors, incorporating feedback to refine the solution.</li>
-          </ul>
+          <div style="background: var(--bg-primary); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+              <span style="font-weight: 700; font-size: 1rem; color: var(--text-primary);">MirrorTalk</span>
+              <span class="badge badge-accent" style="font-size: 0.7rem;">Public Repo</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">
+              Full-stack platform with Google OAuth 2.0, JWT, bcrypt, REST APIs, and Recharts analytics.
+            </p>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-code);">
+              <span>JavaScript &bull; React &bull; MySQL</span>
+              <a href="https://github.com/shivangi-guptaa/MirrorTalk" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">Repository ↗</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Education Section -->
+  <!-- Section 7: Education Section -->
   <section id="education" class="section">
     <div class="container">
       <div class="section-header">
@@ -346,7 +473,7 @@
     </div>
   </section>
 
-  <!-- Achievements Section (Numbered Editorial Layout) -->
+  <!-- Section 8: Achievements Section (Reordered Layout) -->
   <section id="achievements" class="section">
     <div class="container">
       <div class="section-header">
@@ -359,8 +486,8 @@
         <div class="achievement-row reveal-on-scroll stagger-1">
           <span class="achievement-num">01</span>
           <div>
-            <div class="achievement-text-title">NIMCET AIR 323</div>
-            <div class="achievement-text-desc">Ranked 323 among 65,000+ candidates and secured 99.15 percentile in MAH MCA CET 2024.</div>
+            <div class="achievement-text-title">NIMCET AIR 323 & 99.15 Percentile MAH MCA CET 2024</div>
+            <div class="achievement-text-desc">Ranked 323 among 65,000+ candidates in National MCA Entrance Test.</div>
           </div>
         </div>
 
@@ -368,8 +495,8 @@
         <div class="achievement-row reveal-on-scroll stagger-2">
           <span class="achievement-num">02</span>
           <div>
-            <div class="achievement-text-title">250+ DSA Problems Solved</div>
-            <div class="achievement-text-desc">Across LeetCode and HackerRank; earned a 5-Star C++ badge on HackerRank.</div>
+            <div class="achievement-text-title">250+ DSA Problems & 5-Star C++ Badge</div>
+            <div class="achievement-text-desc">Solved 250+ problems across LeetCode & HackerRank; earned HackerRank 5-Star C++ Badge.</div>
           </div>
         </div>
 
@@ -377,7 +504,7 @@
         <div class="achievement-row reveal-on-scroll stagger-3">
           <span class="achievement-num">03</span>
           <div>
-            <div class="achievement-text-title">Postman Student Expert</div>
+            <div class="achievement-text-title">Postman Student Expert Certification</div>
             <div class="achievement-text-desc" style="margin-bottom: 0.3rem;">Certified API testing and documentation credential.</div>
             <a href="https://badges.parchment.com/public/assertions/C2C8wPrxS6ypkPJ-Heu7eQ?identity__email=reachshivangigupta@gmail.com" target="_blank" rel="noopener noreferrer" style="font-size: 0.82rem; color: var(--accent-primary); text-decoration: underline;">
               View Assertion Credential ↗
@@ -389,7 +516,7 @@
         <div class="achievement-row reveal-on-scroll stagger-1">
           <span class="achievement-num">04</span>
           <div>
-            <div class="achievement-text-title">Roobaro Finalist</div>
+            <div class="achievement-text-title">Roobaro Cultural Society Finalist</div>
             <div class="achievement-text-desc">MANIT Bhopal Cultural Society (Anchoring and Creative Arts).</div>
           </div>
         </div>
@@ -397,7 +524,7 @@
     </div>
   </section>
 
-  <!-- Contact Section (Clean Direct Contact Layout) -->
+  <!-- Section 9: Contact Section -->
   <section id="contact" class="section">
     <div class="container">
       <div class="section-header">
@@ -454,9 +581,9 @@
     </div>
   </footer>
 
-  <!-- Skill Detail Interactive Modal Backdrop -->
+  <!-- Skill & Case Study Interactive Modal Backdrop -->
   <div id="skill-modal" class="modal-backdrop">
-    <div class="modal-content" style="max-width: 520px;">
+    <div class="modal-content">
       <button id="skill-modal-close" class="modal-close-btn" aria-label="Close modal">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
