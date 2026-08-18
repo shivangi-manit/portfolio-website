@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Shivangi Gupta</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23174EA6'/><text x='50%' y='65%' font-size='50' font-weight='bold' fill='white' text-anchor='middle' font-family='monospace'>SG</text></svg>" />
+  <link rel="stylesheet" href="./src/css/variables.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      text-align: center;
+      padding: 2rem;
+    }
+    .error-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      max-width: 480px;
+      width: 100%;
+    }
+    .error-code {
+      font-family: var(--font-code);
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--accent-primary);
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-card">
+    <div class="error-code">404</div>
+    <h1 style="font-size: 1.5rem; margin-bottom: 0.8rem;">Page Not Found</h1>
+    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem;">
+      The requested page could not be found. Return to the main portfolio homepage.
+    </p>
+    <a href="./" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+      Return Home
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </a>
+  </div>
+</body>
+</html>
