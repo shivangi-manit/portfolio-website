@@ -271,4 +271,6 @@ function openCaseStudyModal(project) {
   `;
 
   modal.classList.add('active');
+  modal.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
 }

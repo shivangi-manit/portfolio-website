@@ -51,19 +51,19 @@ const skillDetailsMap = {
     desc: "JSON Web Token implementation for role-based authorization (Student, Recruiter, Admin) and stateless session management.",
     projects: ["Campus Placement Portal", "MirrorTalk"]
   },
-  "Google OAuth": {
+  "JWT": {
+    category: "Security & Auth",
+    desc: "JSON Web Token implementation for role-based authorization (Student, Recruiter, Admin) and stateless session management.",
+    projects: ["Campus Placement Portal", "MirrorTalk"]
+  },
+  "OAuth": {
     category: "OAuth 2.0 Security",
     desc: "Integrated Google OAuth 2.0 authentication for seamless user sign-in and account verification.",
     projects: ["MirrorTalk"]
   },
-  "Email Verification": {
-    category: "Security Workflow",
-    desc: "Automated account verification emails and password reset links with secure token expiration.",
-    projects: ["MirrorTalk"]
-  },
-  "Password Reset": {
-    category: "Security Workflow",
-    desc: "Bcrypt password hashing and secure token-based password recovery functionality.",
+  "Google OAuth": {
+    category: "OAuth 2.0 Security",
+    desc: "Integrated Google OAuth 2.0 authentication for seamless user sign-in and account verification.",
     projects: ["MirrorTalk"]
   },
   "Multer": {
@@ -116,11 +116,6 @@ const skillDetailsMap = {
     desc: "Normalized 3NF relational database schema design with primary/foreign key constraints.",
     projects: ["Campus Placement Portal", "MirrorTalk"]
   },
-  "Joins": {
-    category: "Database Operations",
-    desc: "INNER, LEFT, and RIGHT multi-table JOIN operations for relational data aggregation.",
-    projects: ["Campus Placement Portal"]
-  },
   "Indexing": {
     category: "Database Optimization",
     desc: "B-Tree database indexing on high-frequency query columns to optimize data retrieval performance.",
@@ -135,7 +130,7 @@ export function initSkillModal() {
 
   if (!modalBackdrop || !modalCloseBtn || !modalBody) return;
 
-  // Make every skill tag interactive across About & Skills section
+  // Global click delegate for editorial skill tags
   document.addEventListener('click', (e) => {
     const tagEl = e.target.closest('.editorial-tag');
     if (tagEl) {
@@ -150,13 +145,20 @@ export function initSkillModal() {
     }
   });
 
-  modalCloseBtn.addEventListener('click', () => closeSkillModal(modalBackdrop));
+  // Universal Modal Close Event Listeners
+  modalCloseBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeSkillModal(modalBackdrop);
+  });
+
   modalBackdrop.addEventListener('click', (e) => {
-    if (e.target === modalBackdrop) closeSkillModal(modalBackdrop);
+    if (e.target === modalBackdrop) {
+      closeSkillModal(modalBackdrop);
+    }
   });
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalBackdrop.classList.contains('is-open')) {
+    if (e.key === 'Escape') {
       closeSkillModal(modalBackdrop);
     }
   });
@@ -164,7 +166,7 @@ export function initSkillModal() {
 
 function openSkillModal(skillName, details, backdrop, modalBody) {
   modalBody.innerHTML = `
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; padding-right: 1.5rem;">
       <div>
         <span class="section-label" style="margin-bottom: 0.2rem;">${details.category}</span>
         <h2 style="font-size: 1.8rem; margin: 0; color: var(--text-primary);">${skillName}</h2>
@@ -175,7 +177,7 @@ function openSkillModal(skillName, details, backdrop, modalBody) {
       ${details.desc}
     </p>
 
-    <div style="background: var(--bg-primary); padding: 1.1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-medium);">
+    <div style="background: var(--bg-primary); padding: 1.1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
       <span style="font-family: var(--font-code); font-size: 0.75rem; color: var(--accent-primary); font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Relevant Experience & Projects</span>
       <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
         ${details.projects.map(p => `<span class="badge badge-accent">${p}</span>`).join('')}
@@ -183,11 +185,16 @@ function openSkillModal(skillName, details, backdrop, modalBody) {
     </div>
   `;
 
+  backdrop.classList.add('active');
   backdrop.classList.add('is-open');
   document.body.style.overflow = 'hidden';
 }
 
-function closeSkillModal(backdrop) {
-  backdrop.classList.remove('is-open');
+export function closeSkillModal(backdrop) {
+  const modal = backdrop || document.getElementById('skill-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    modal.classList.remove('is-open');
+  }
   document.body.style.overflow = '';
 }
