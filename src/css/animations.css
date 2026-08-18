@@ -1,0 +1,124 @@
+/* Swiss Editorial Micro-Interactions & Animations */
+
+/* 1. Scroll Progress Indicator Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--accent-primary);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* 2. Custom Desktop Cursor Follower */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-primary);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+  display: none;
+}
+
+.cursor-ring {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--accent-primary);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s var(--ease-editorial), opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+  opacity: 0.4;
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-dot, .cursor-ring {
+    display: block;
+  }
+}
+
+/* 3. Scroll Reveal Classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--ease-editorial), transform 0.5s var(--ease-editorial);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.06s; }
+.stagger-2 { transition-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.18s; }
+.stagger-4 { transition-delay: 0.24s; }
+
+/* 4. Editorial Hover Shift for Hero Info Panel Rows */
+.panel-row {
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.panel-row:hover {
+  transform: translateX(4px);
+  border-color: var(--accent-primary);
+  background-color: var(--bg-tertiary);
+}
+
+/* 5. Editorial Skill Tag Hover */
+.editorial-tag {
+  transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.editorial-tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+/* 6. Timeline Line Animation */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 1px;
+  background-color: var(--border-medium);
+}
+
+/* 7. Reduced Motion Accessibility Overrides */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .cursor-dot, .cursor-ring {
+    display: none !important;
+  }
+
+  .panel-row:hover, .editorial-tag:hover {
+    transform: none !important;
+  }
+}
