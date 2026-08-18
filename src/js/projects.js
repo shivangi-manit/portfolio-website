@@ -15,18 +15,7 @@ export const projectsData = [
       "Implemented search and filtering by CGPA, branch, and skills with real-time updates using React.js and Axios."
     ],
     mockupAddress: "campus-placement-portal-website.vercel.app",
-    mockupCode: `
-// Architectural Spec - Placement Portal
-const AuthModule = {
-  roles: ['Student', 'Recruiter', 'Admin'],
-  strategy: 'JWT (Bearer Token)',
-  middleware: 'verifyRoleRBAC()'
-};
-const DBConfig = {
-  engine: 'MySQL',
-  tables: 10, // FK Constraints + Indexing
-  apiCount: 20 // RESTful Endpoints
-};`
+    mockupImage: "./assets/campus_placement_portal.png"
   },
   {
     num: "PROJECT 02",
@@ -41,17 +30,32 @@ const DBConfig = {
       "Built interactive dashboards with Recharts to visualize mood trends, journaling history, and user engagement."
     ],
     mockupAddress: "mirrortalk-app.vercel.app",
-    mockupCode: `
-// Feature Spec - MirrorTalk App
-const Security = {
-  auth: ['JWT', 'Google OAuth 2.0'],
-  encryption: 'bcrypt (Salt 10)',
-  services: ['Email Verification', 'Password Reset']
-};
-const Analytics = {
-  chartEngine: 'Recharts',
-  metrics: ['Mood Trends', 'Journal Stats']
-};`
+    mockupUI: `
+      <div style="display: flex; flex-direction: column; gap: 0.8rem; padding: 1.2rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border-subtle);">
+          <span style="font-size: 0.82rem; font-weight: 600;">Personal Analytics Dashboard</span>
+          <span class="badge badge-accent" style="font-size: 0.75rem;">Google OAuth 2.0</span>
+        </div>
+
+        <div style="background: var(--bg-primary); padding: 0.8rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.4rem;">
+            <span>Recharts Mood Analytics</span>
+            <span style="color: var(--accent-primary);">Weekly Trend &uarr;</span>
+          </div>
+          <svg viewBox="0 0 200 40" style="width: 100%; height: 40px; overflow: visible;">
+            <path d="M0,30 Q30,10 60,25 T120,8 T180,20 T200,5" fill="none" stroke="var(--accent-primary)" stroke-width="2" />
+            <circle cx="60" cy="25" r="3" fill="var(--accent-primary)" />
+            <circle cx="120" cy="8" r="3" fill="var(--accent-primary)" />
+            <circle cx="180" cy="20" r="3" fill="var(--accent-primary)" />
+          </svg>
+        </div>
+
+        <div style="background: var(--bg-primary); padding: 0.6rem 0.8rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem;">
+          <span>Daily Journaling Log</span>
+          <span style="color: var(--text-muted); font-size: 0.75rem;">Password Reset &bull; Multer Uploads</span>
+        </div>
+      </div>
+    `
   }
 ];
 
@@ -93,8 +97,11 @@ export function initProjects() {
           <div class="browser-dot"></div>
           <div class="browser-address-bar">https://${project.mockupAddress}</div>
         </div>
-        <div class="browser-content">
-          <pre style="margin: 0; white-space: pre-wrap;"><code>${project.mockupCode.trim()}</code></pre>
+        <div class="browser-content" style="padding: 0;">
+          ${project.mockupImage 
+            ? `<img src="${project.mockupImage}" alt="${project.title} Screenshot" style="width: 100%; height: auto; display: block; object-fit: cover;" />`
+            : project.mockupUI.trim()
+          }
         </div>
       </div>
     </article>
